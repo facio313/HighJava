@@ -1,0 +1,8 @@
+package kr.or.ddit.basic;
+
+public class T06TreeSetTest { // Tree 자료 구조
+	public static void main(String[] args) {
+		//TreeSet은 데이터가 넣어질 때 정렬된 상태로 넣어짐
+		//Tree는 검색 속도가 빠름(몇 단계만 거치면 대부분 빨리 찾아낼 수 있어서)
+	}
+}

@@ -1,0 +1,7 @@
+package kr.or.ddit.basic;
+
+public class T06TreeSetTest {
+	public static void main(String[] args) {
+		
+	}
+}
