@@ -22,6 +22,9 @@ public class T01GenericClassTest {
 	 K => Key
 	 V => Value
 	 E => Element(자료구조에 들어가는 원소들을 나타낼 때 사용함)
+	 
+	 잘못된 타입을 사용할 여지를 줄여준다
+	 
 	 */
 	public static void main(String[] args) {
 

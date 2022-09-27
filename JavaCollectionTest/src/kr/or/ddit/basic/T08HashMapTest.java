@@ -9,6 +9,13 @@ public class T08HashMapTest {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<String, String>();
 		
+		/*
+		Map은 key와 value를 짝으로 하여 entry로 저장하게 됨
+		put(key, value) 추가, 수정
+		remove(key) 삭제
+		get(key) 읽기
+		*/
+		
 		// 자료 추가 => put(key값, value값);
 		map.put("name", "홍길동");
 		map.put("addr", "대전");

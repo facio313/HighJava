@@ -42,6 +42,7 @@ public class Hotel {
 				room.put(roomNum, name);
 				System.out.println("체크인 되었습니다.");
 				break;
+				// 방이 이미 예약되어있는 경우 예외처리 하기
 			case 2:
 				System.out.println("어느 방을 체크아웃 하시겠습니까?");
 				System.out.print("방 번호 입력 => ");
@@ -50,6 +51,7 @@ public class Hotel {
 				room.remove(typeRoomNum);
 				System.out.println("체크아웃 되었습니다.");
 				break;
+				// 방이 예약되어있지 않는 경우 체크아웃하는 예외처리 하기
 			case 3:
 				Set<Map.Entry<Integer, String>> entrySet = room.entrySet();
 				Iterator<Map.Entry<Integer, String>> entryIt = entrySet.iterator();
@@ -58,6 +60,7 @@ public class Hotel {
 					System.out.printf("방 번호 : %d, 투수객 : %s\n", entry.getKey(), entry.getValue());
 				}
 				break;
+				// 예약이 없는 경우 나타내는 예외처리 하기
 			case 4:
 				System.out.println("**************************");
 				System.out.println("호텔 문을 닫았습니다.");
