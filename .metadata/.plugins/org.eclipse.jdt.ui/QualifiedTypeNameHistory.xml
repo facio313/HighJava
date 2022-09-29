@@ -23,7 +23,6 @@
 <fullyQualifiedTypeName name="kr.or.ddit.basic.Meat"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.Juice"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.Juicer"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
 <fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
@@ -38,4 +37,17 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Modifier"/>
 <fullyQualifiedTypeName name="java.lang.annotation.Annotation"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.homework.Planets.Planet"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.SumThread"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.T06ThreadTest"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.AutoSaveThread"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.homework.test"/>
 </qualifiedTypeNameHistroy>
