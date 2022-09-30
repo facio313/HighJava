@@ -1,7 +1,0 @@
-package kr.or.ddit.basic;
-
-public class T06TreeSetTest { // Tree 자료 구조
-	public static void main(String[] args) {
-		
-	}
-}
