@@ -1,3 +1,4 @@
+package kr.or.ddit.basic.homework;
 //package kr.or.ddit.basic.homework;
 //
 //public class Horse extends Thread implements Comparable<Horse> {

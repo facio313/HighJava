@@ -1,9 +1,20 @@
 package kr.or.ddit.basic.homeworkretry;
 
-public class Horse implements Comparable<Horse> {
-	private String name;
+import kr.or.ddit.basic.T11DisplayCharacterTest;
+
+public class Horse extends Thread implements Comparable<Horse> {
+	private int num = 0;
 	private int rank = 1;
 	String[] track = new String[50];
+
+	public Horse() {
+		
+	}
+	
+	public Horse(int num) {
+		super();
+		this.num = num;
+	}
 
 	public String[] getTrack() {
 		for (int i = 0; i < 50; i++) {
@@ -11,19 +22,13 @@ public class Horse implements Comparable<Horse> {
 		}
 		return track;
 	}
-
-
-	public Horse(String name) {
-		super();
-		this.name = name;
+	
+	public int getNum() {
+		return num;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setNum(int num) {
+		this.num = num;
 	}
 
 	public int getRank() {
@@ -33,56 +38,43 @@ public class Horse implements Comparable<Horse> {
 	public void setRank(int rank) {
 		this.rank = rank;
 	}
-	
+
 	@Override
-	public String toString() {
-		return String.format("Horse [name=%s, rank=%s]", name, rank);
-	}
-	
-	public int avgTime() {
-		int total = 0;
+	public void run() {
 		for (int i = 0; i < 50; i++) {
-			
-		long startTime = System.currentTimeMillis();
-		
-		
-		long sum = 0;
-		for (long j = 1; j <= 500000000L; j++) {
-			sum += j;
-		}
-		
-		long endTime = System.currentTimeMillis();
-		
-		int time = (int) (endTime - startTime);
-		total += time;
-		}
-		
-		int avg = total / 50;
-		return avg;
-	}
-	
-	public int runTime() {
-		long startTime = System.currentTimeMillis();
-
-		long sum = 0;
-		for (long j = 1; j <= 500000000L; j++) {
-			sum += j;
+			track[i] = "-";
 		}
 
-		long endTime = System.currentTimeMillis();
-		
-		int time = (int) (endTime - startTime);
-		return time;
+		for (int i = 0; i < 50; i++) {
+			track[i] = ">";
+			try {
+				track[i - 1] = "-";
+			} catch (ArrayIndexOutOfBoundsException e) {
+				track[i] = "-";
+			}
+
+			try {
+				Thread.sleep((int) (Math.random() * 500 + 500));
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+			System.out.print(num + "번 말\t");
+			print(track);
+		}
+
+		setRank(Race.currRank++);
 	}
-	
-//	@Override
-//	public void run() {
-//	">" 이걸 넣어주는 것만 넣어놓고	
-//	어플리케이션에서 while과 if문 쓰기
-//	}
+
+	public static void print(String[] track) {
+		for (String str : track) {
+			System.out.print(str);
+		}
+		System.out.println();
+	}
 
 	@Override
 	public int compareTo(Horse horse) {
-		return Integer.valueOf(getRank()).compareTo(Integer.valueOf(horse.getRank()));
+		return new Integer(this.getRank()).compareTo(horse.getRank());
 	}
 }
