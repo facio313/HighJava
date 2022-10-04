@@ -16,6 +16,7 @@ public class Race extends Thread {
 		}
 
 		// 데몬 스레드 설정 후 익명 자식 객체를 만들어 Thread의 run()을 Override
+		// 따로 데몬 스레드 클래스를 만들 거면 => 필드 - List<Horse> horse 생성자 - public Daemon(List<Horse> horse){super();, this.horse = horse;} 
 		Thread daemon = new Thread() {
 			@Override
 			public void run() {

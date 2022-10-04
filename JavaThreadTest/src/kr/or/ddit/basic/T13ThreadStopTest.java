@@ -86,7 +86,7 @@ class ThreadStopEx2 extends Thread {
 			}
 			*/
 			
-			// 검사 방벙 2 => 스레드의 정적 메서드를 이용하는 방법
+			// 검사 방법 2 => 스레드의 정적 메서드를 이용하는 방법
 			if(Thread.interrupted()) {
 				System.out.println("정적 메서드 interrupted()");
 				break;
