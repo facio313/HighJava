@@ -40,7 +40,7 @@ public class T01FileTest {
 		System.out.println("표준 경로 : " + file4.getCanonicalPath());
 		
 		/*
-		 * 디렉토리(폴더) 만들기
+		 * 디렉토리(폴더) 만들기 -> 일단 폴더 만들기 권한이 있어야 함.
 		 * 
 		 * 1. mkdir() 	=> File객체의 경로 중 마지막 위치의 디렉토리를 만든다.
 		 * 				=> 중간의 경로가 모두 미리 만들어져 있어야 한다.
