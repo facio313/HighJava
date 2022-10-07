@@ -9,10 +9,11 @@ import java.io.InputStreamReader;
 
 public class Copy {
 	public static void main(String[] args) throws IOException {
-		FileInputStream fis = new FileInputStream("D:/D_Other/Tulips.jpg");
-		FileOutputStream fos = null;
+		FileInputStream fis = null;
+		FileOutputStream fos = null; 
 		
 		try {
+			fis = new FileInputStream("D:/D_Other/Tulips.jpg");
 			fos = new FileOutputStream("d:/D_Other/복사본_Tulips.jpg");
 			
 			int data = 0;

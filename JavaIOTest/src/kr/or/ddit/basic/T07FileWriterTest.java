@@ -12,9 +12,9 @@ public class T07FileWriterTest {
 		// 사용자가 입력한 내용을 그대로 파일로 저장하기
 		
 		// 콘솔(표준입력장치)과 연결된 입력용 문자 스트림 객체 생성하기
-		// InputStreamReader => 바이트 기반 스트림을 문자 기반 스트림으로 변환해주는 보조 스트림이다. -> 기반(메인)스트림도 있다.
+		// InputStreamReader => 바이트 기반 스트림을 문자 기반 스트림으로 변환해주는 보조 스트림이다. -> 기본(메인)스트림도 있다.
 		InputStreamReader isr = new InputStreamReader(System.in);
-		// 여기서 기반스트림은 System.in
+		// 여기서 기본스트림은 System.in
 		
 		FileWriter fw = null; // 파일 출력용 문자 기반 스트림
 		
