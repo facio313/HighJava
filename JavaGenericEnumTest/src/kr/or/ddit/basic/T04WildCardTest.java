@@ -7,7 +7,7 @@ public class T04WildCardTest {
 /*
  와일드 카드에 대하여...
  
- 와일드 카드(?)는 제너릭 타입을 이용한 타입 안전한 코딩을 위해 사용되는 특별한 종류의 인수(Argument)로서
+ 와일드 카드(?)는 제너릭 타입을 이용한 타입 안전한 코딩을 위해 사용되는
  특별한 종류의 인수(Argument)로서 변수선언, 객체생성 및 메서드 정의 시 사용된다.
  (제너릭 타입 선언 시에는 사용할 수 없다.)
  제너릭이 없는 와일드카드는 없음
@@ -25,22 +25,23 @@ public class T04WildCardTest {
 	
 	public static void main(String[] args) {
 		
-		FruitBox<Fruit> fruitBox = new FruitBox<>(); // 과일상자, 원래는 뒤 생성자 <>에 Fruit 넣어야 하지만 생략 가능(diamond grammar)
-		FruitBox<Apple> appleBox = new FruitBox<>();
+		// 과일상자, 원래는 뒤 생성자 <>에 Fruit 넣어야 하지만 생략 가능(diamond grammar)
+		FruitBox<Fruit> fruitBox = new FruitBox<>(); // 그냥 과일 상자 만들기
+		FruitBox<Apple> appleBox = new FruitBox<>(); // 사과만 들어갈 수 있는 사과 상자 만들기
 //		FruitBox<Garbage> garbageBox = new FruitBox<>();
 		
 		fruitBox.add(new Apple()); // FruitBox는 제너릭 클래스라 다 들어올 수 있지만
-		fruitBox.add(new Grape());
+		fruitBox.add(new Grape()); // (사과랑 포도 하나씩 넣음)
 		
-		appleBox.add(new Apple());
+		appleBox.add(new Apple()); // 사과상자에 사과만 넣음
 		appleBox.add(new Apple());
 //		appleBox.add(new Grape()); // AppleBox는  Apple타입만 들어갈 수 있음
 		
 //		garbageBox.add(new Garbage());
 //		garbageBox.add(new Garbage());
 
-		Juicer.makeJuice(fruitBox);
-		Juicer.makeJuice(appleBox); 
+		Juicer.makeJuice(fruitBox); // 사과랑 포도로 쥬스 만듬
+		Juicer.makeJuice(appleBox); // 사과로 쥬스 만듬
 //		Juicer.makeJuice(garbageBox);
 		
 	
@@ -104,11 +105,11 @@ class Grape extends Fruit {
 }
 
 // 과일상자
-class FruitBox<T extends Fruit> {
+class FruitBox<T extends Fruit> { //T는 Apple이나 Grape가 올 수 있겠지?
 	private List<T> fruitList;
 	
-	public FruitBox() {
-		fruitList = new ArrayList<T>();
+	public FruitBox() { // 생성자를 호출하거나 통해 객체를 만들면 
+		fruitList = new ArrayList<T>(); // T(Apple or Grape)의 객체가 들어갈 수 있는 ArrayList를 만들어낸다!
 	}
 
 	public List<T> getFruitList() {

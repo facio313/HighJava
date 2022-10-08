@@ -1,4 +1,4 @@
-package kr.or.ddit.basic;
+package kr.or.ddit.basic; 
 
 public class T06EnumTest {
 /*
