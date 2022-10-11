@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 
 public class T10FileEncodingTest {
 /*
+ * 비영어권 문자 처리를 위해서 인코딩이 필요함
+ * 
  * 한글 인코딩 방식에 대하여...
  * 
  *  한글 인코딩 방식은 크게 UTF-8과 EUC-KR 방식, 두 가지로 나누어 볼 수 있다.

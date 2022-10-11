@@ -24,7 +24,8 @@ public class T12BufferedIOTest {
 			bos = new BufferedOutputStream(fos, 5); // 바이트 기반을 위한 보조 스트림
 			
 			for (char ch = '1'; ch <= '9'; ch++) {
-				bos.write(ch);
+//				fos.write(ch); // 이렇게 해도 똑같음 얘는 하나씩 주는 것이고
+				bos.write(ch); // 얘는 모았다가 주는 것
 			}
 			
 			bos.flush(); // 작업을 종료하기 전에 버퍼에 남아있는 데이터를 모두 출력시킨다.(close 시 자동 호출됨)

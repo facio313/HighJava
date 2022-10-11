@@ -9,7 +9,9 @@ import java.io.PrintWriter;
 
 /**
  * 프린터 기능을 제공하는 보조 스트림 예제
+ * 숫자, 문자, 논리, 객체 다 출력해줌
  */
+
 public class T15PrintStreamTest {
 	public static void main(String[] args) throws IOException {
 		
@@ -46,5 +48,6 @@ public class T15PrintStreamTest {
 		pw.close();
 		
 		// PrintStream은 예전부터 쓰던 거라 쓰는 거고 PrintWriter가 더 낫다
+		// survlet할 때 다시 사용할 것임
 	}
 }

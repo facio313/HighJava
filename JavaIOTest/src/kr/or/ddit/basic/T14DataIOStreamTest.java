@@ -8,6 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/**
+ * 기본타입 입출력 보조 스트림
+ * 기본타입은 바이트가 더 크기 때문에 보조스트림이 도와줌 
+ */
+
 public class T14DataIOStreamTest {
 	public static void main(String[] args) throws IOException {
 		
