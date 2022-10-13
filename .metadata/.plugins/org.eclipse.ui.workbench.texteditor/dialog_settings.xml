@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Serializable"/>
+		<item key="selection" value="JDBCUtil2"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="JDBCUtil"/>
 			<item value="serializable"/>
 			<item value="class"/>
 			<item value="main"/>
@@ -22,9 +23,9 @@
 			<item value="제네릭"/>
 			<item value="class MyGeneric&lt;T&gt; {"/>
 			<item value="compareTo"/>
-			<item value="메소드"/>
 		</list>
 		<list key="replacehistory">
+			<item value="JDBCUtil2"/>
 			<item value="제너릭"/>
 		</list>
 	</section>
