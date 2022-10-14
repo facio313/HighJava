@@ -23,7 +23,7 @@ public class T08ThreadPriorityTest {
 			} else {
 				ths[i].setPriority(Thread.MIN_PRIORITY);
 			}
-		}
+		} 
 		
 		// 우선순위 출력
 		for (Thread th : ths) {

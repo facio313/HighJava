@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.YieldThreadEx1"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.YieldThreadEx2"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadStopEx1"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.CalcPIThread"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.PrintPIThread"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.ShareData"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.ShareObject"/>
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.BankThread"/>
 <fullyQualifiedTypeName name="java.util.concurrent.locks.Lock"/>
-<fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="com.sun.corba.se.spi.orbutil.threadpool.Work"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.WorkObject"/>
 <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
@@ -22,9 +16,6 @@
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="javax.swing.text.SimpleAttributeSet"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.T03ByteArrayIOTest"/>
@@ -52,7 +43,6 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="java.util.ResourceBundle"/>
 <fullyQualifiedTypeName name="java.util.Enumeration"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
@@ -60,4 +50,14 @@
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="kr.or.ddit.util.JDBCUtil"/>
+<fullyQualifiedTypeName name="java.util.ResourceBundle"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.dao.IMemberDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.dao.MemberDaoImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.service.IMemberService"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="kr.or.ddit.util.JDBCUtil3"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.vo.MemberVO"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

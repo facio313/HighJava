@@ -3,6 +3,7 @@ package kr.or.ddit.basic;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.Properties;
 
@@ -11,7 +12,7 @@ import java.util.Properties;
  */
 public class T02PropertiesTest {
 	public static void main(String[] args) {
-
+		
 		// 읽어온 정보를 저장할 Properties객체 생성
 		Properties prop = new Properties();
 		
