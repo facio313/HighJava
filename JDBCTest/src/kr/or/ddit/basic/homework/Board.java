@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import kr.or.ddit.basic.homework.BoardVO;
 import kr.or.ddit.util.JDBCUtil3;
 
 /*
@@ -76,14 +77,17 @@ public class Board {
 		
 		System.out.println();
 		
+		System.out.println();
 		System.out.print("제목 >> ");
 		String title = scan.next();
 		
+		System.out.println();
 		System.out.print("글쓴이 >> ");
 		String writer = scan.next();
 		
 		scan.nextLine();
 		
+		System.out.println();
 		System.out.print("내용 >> ");
 		String content = scan.nextLine();
 		
@@ -241,6 +245,103 @@ public class Board {
 		return exist;
 	}
 	
+	public void searchBoard() {
+		scan.nextLine();
+		
+		System.out.println();
+		System.out.println("검색할 글 정보를 입력하세요.");
+		
+		System.out.print("글 번호 >> ");
+		int no = scan.nextInt();
+		
+		System.out.print("책 제목 >> ");
+		String title = scan.nextLine().trim();
+		
+		System.out.print("작가 >> ");
+		String writer = scan.nextLine().trim();
+		
+		BoardVO bv = new BoardVO();
+		bv.setNo(no);
+		bv.setTitle(title);
+		bv.setWriter(writer);
+		
+		List<BoardVO> list = new ArrayList<>();
+		
+		try {
+			conn = JDBCUtil3.getConnection();
+			
+			String sql = " select * from JDBC_BOARD where 1=1 ";
+			
+			if (bv.getNo() <= 0) {
+				sql += " and board_no = ? ";
+			}
+			
+			if (bv.getTitle() != null && !bv.getTitle().equals("")) {
+				sql += " and board_title = ?";
+			}
+			if (bv.getWriter() != null && !bv.getWriter().equals("")) {
+				sql += " and board_writer = ?";
+			}
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			int index = 1;
+			
+			if (bv.getNo() <= 0) {
+				pstmt.setInt(index++,  bv.getNo());
+			}
+			
+			if (bv.getTitle() != null && !bv.getTitle().equals("")) {
+				pstmt.setString(index++, bv.getTitle());
+			}
+			if (bv.getWriter() != null && !bv.getWriter().equals("")) {
+				pstmt.setString(index++, bv.getWriter());
+			}
+			
+			rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				
+				BoardVO bv2 = new BoardVO();
+				
+				bv2.setNo(rs.getInt("board_no"));
+				bv2.setTitle(rs.getString("board_title"));
+				bv2.setWriter(rs.getString("board_writer"));
+				
+				list.add(bv2);
+				
+			}
+			
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		} finally {
+			JDBCUtil3.close(conn, stmt, pstmt, rs);
+		}
+		
+		System.out.println();
+		System.out.println("-------------------------------------------------------------");
+		System.out.println("번호\t제목\t글쓴이\t날짜\t내용");
+		System.out.println("-------------------------------------------------------------");
+		
+		if (list.size() == 0) {
+			System.out.println("글 정보가 존재하지 않습니다.");
+		} else {
+			
+			for (BoardVO bv2 : list) {
+				System.out.println(
+						bv2.getNo() 	+ "\t" 
+								+ bv2.getTitle() 	+ "\t" 
+								+ bv2.getWriter() 	+ "\t" 
+								+ bv2.getDate() 	+ "\t" 
+								+ bv2.getContent() 	+ "\t");
+			}
+			
+		}
+		
+		System.out.println("-------------------------------------------------------------");
+		System.out.println("검색 작업 끝.");
+	}
+	
 	public void listBoard() { // 리스트 타입으로 바꾸기
 		System.out.println();
 		System.out.println("-------------------------------------------------------------");
@@ -278,10 +379,6 @@ public class Board {
 		} finally {
 			JDBCUtil3.close(conn, stmt, pstmt, rs);
 		}
-	}
-	
-	public void searchBoard() {
-		
 	}
 	
 	public static void main(String[] args) {

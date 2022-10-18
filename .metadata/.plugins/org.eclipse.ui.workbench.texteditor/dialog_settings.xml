@@ -8,6 +8,11 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="member"/>
+			<item value="selectlist"/>
+			<item value="selectMember"/>
+			<item value="emberVO"/>
+			<item value="check"/>
 			<item value="insert"/>
 			<item value="회원정보"/>
 			<item value="JDBCUtil2"/>
@@ -18,11 +23,6 @@
 			<item value="entry"/>
 			<item value="Entry"/>
 			<item value="creat"/>
-			<item value="deposit"/>
-			<item value="print"/>
-			<item value="ready"/>
-			<item value="exit"/>
-			<item value="오토"/>
 		</list>
 		<list key="replacehistory">
 			<item value="JDBCUtil3"/>

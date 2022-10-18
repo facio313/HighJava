@@ -1,4 +1,4 @@
-package kr.or.ddit.basic.homework;
+package kr.or.ddit.board.vo;
 
 import java.util.Date;
 

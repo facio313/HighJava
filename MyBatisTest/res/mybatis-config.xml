@@ -6,6 +6,17 @@
 <configuration>
 	
 	<properties resource="db.properties" />
+		
+	<settings>
+	<!-- DB 컬럼명을 낙타표기법으로 속성명과 자동 매핑 처리하기 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+		<!-- 이거 쓰면 쿼리문에서 resultMap 안 써도 됨. 물론 다른 경우에 또 씀 -->
+	</settings>
+		
+	<typeAliases>
+		<typeAlias type="kr.or.ddit.member.vo.MemberVO" alias="MemberVO"/>
+		<typeAlias type="kr.or.ddit.board.vo.BoardVO" alias="BoardVO"/>
+	</typeAliases>
 
 	<environments default="dev">
 <!--<environments default="real"> 용도를 정해서 default 값을 바꾸면 됨-->
@@ -41,7 +52,8 @@
 	</environments>
 	
 	<mappers>
-	<mapper resource="kr/or/ddit/basic/memberTest.xml" />
+	<mapper resource="mappers/member.xml" />
+	<mapper resource="mappers/board.xml" />
 	</mappers>
 
 </configuration>

@@ -1,0 +1,2 @@
+2022-10-18 16:03:57,658 DEBUG Query [main] basic.T01MemberInfoTest (T01MemberInfoTest.java:316) - sql :  insert into mymember (MEM_ID, MEM_NAME, MEM_TEL, MEM_ADDR, REG_DT)  values (?, ?, ?, ?, sysdate) 
+2022-10-18 16:03:57,660 INFO  Parameter [main] basic.T01MemberInfoTest (T01MemberInfoTest.java:324) - 파라미터 정보 => memId'a001, memName김경수, memTel010-0909-0909memAddr대전시 비래동
