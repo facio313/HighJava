@@ -9,10 +9,12 @@ public class T10ThreadStateTest {
 	/*
 	 * <스레드의 상태>
 	 * 
-	 * - NEW : 스레드가 생성되고 아직 start()가 호출되지 않은 상태 - RUNNABLE : 실행 또는 실행 가능한 상태 -
-	 * BLOCKED : 동기화 블럭에 의해서 일시정지된 상태(Lock이 풀릴 때까지 기다리는 상태) - WAITING,
-	 * TIMED_WAITTING : 스레드의 작업이 종료되지는 않았지만 실행 가능하지는 않은 일시정지 상태(TIMED_WAITING은 시간이
-	 * 지정된 경우) - TERMINATED : 스레드의 작업이 종료된 상태
+	 * - NEW : 스레드가 생성되고 아직 start()가 호출되지 않은 상태 
+	 * - RUNNABLE : 실행 또는 실행 가능한 상태 
+	 * - BLOCKED : 동기화 블럭에 의해서 일시정지된 상태(Lock이 풀릴 때까지 기다리는 상태) 
+	 * - WAITING, TIMED_WAITTING : 스레드의 작업이 종료되지는 않았지만 실행 가능하지는 않은 일시정지 상태
+	 * (TIMED_WAITING은 시간이 지정된 경우) 
+	 * - TERMINATED : 스레드의 작업이 종료된 상태
 	 */
 
 	public static void main(String[] args) {

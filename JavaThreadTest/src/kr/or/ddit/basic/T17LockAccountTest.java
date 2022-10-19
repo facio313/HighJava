@@ -10,10 +10,10 @@ public class T17LockAccountTest {
 	/*
 	 * 락 기능을 제공하는 클래스
 	 * 
-	 * ReentrantLock : Read[ Write 구분 없이 사용하기 위한 락 클래스 synchronized를 이용한 동기화 처리보다
-	 * 읿너적인 기능에 제공된다. ex) Fairness 설정 등 => 가장 먼저 락을 획득하게 됨 가맍어 너 클릭함
+	 * ReentrantLock : Read, Write 구분 없이 사용하기 위한 락 클래스 synchronized를 이용한 동기화 처리보다
+	 * 일?적인 기능에 제공된다. ex) Fairness 설정 등 => 가장 먼저 락을 획득하게 됨 가맍어 너 클릭함
 	 * 
-	 * ReemtrantReadWrifte : Read 및 Write락을 구분하여 사용 가능함. 여러 스레드가 동시에 read 작업은 가능하지만,
+	 * ReemtrantReadWrite : Read 및 Write락을 구분하여 사용 가능함. 여러 스레드가 동시에 read 작업은 가능하지만,
 	 * write 작업은 단지 하나의 스레드만 가능함 => write보다 read 위주의 작업이 많이 발생하는 경우에 사용하면 유리하다
 	 */
 	public static void main(String[] args) {
