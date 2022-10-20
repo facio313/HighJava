@@ -14,7 +14,7 @@ public class MultiChatClient {
 		Socket socket = null;
 		
 		try {
-			socket = new Socket("192.168.35.", 7777);
+			socket = new Socket("192.168.35.51", 7777);
 			
 			System.out.println("서버에 연결되었습니다.");
 			
@@ -48,13 +48,10 @@ public class MultiChatClient {
 		@Override
 		public void run() {
 			
-			String nick = "";
-			
 			try {
 				if (dos != null) {
 					// 시작하자마자 자신의 대화명을 서버로 전송
 					System.out.print("대화명 >> " );
-					
 					dos.writeUTF(scan.nextLine());
 				}
 				

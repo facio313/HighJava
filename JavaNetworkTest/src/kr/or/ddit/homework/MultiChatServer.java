@@ -70,8 +70,7 @@ public class MultiChatServer {
 				
 				// 대화명에 해당하는 Socket객체에서 OutputStream 꺼내기
 				DataOutputStream dos = new DataOutputStream(clients.get(name).getOutputStream());
-				dos.writeUTF(msg); // 메시지 전송하기
-				
+					dos.writeUTF(msg); // 메시지 전송하기
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
@@ -84,6 +83,10 @@ public class MultiChatServer {
 	 * @param from
 	 */
 	public void sendMessage(String msg, String from) {
+		sendMessage("[" + from + "]" + msg);
+	}
+	
+	public void sendPrivateMessage(String msg, String from) {
 		sendMessage("[" + from + "]" + msg);
 	}
 	
@@ -118,13 +121,29 @@ public class MultiChatServer {
 				// 대화명과 소켓객체를 Map에 저장한다.
 				clients.put(name, socket);
 				
+				
 				System.out.println("현재 서버 접속자 수는 " + clients.size() + "명 입니다.");
 				
 				// 이 이후의 메시지 처리는 반복문을 처리한다.
 				// 한 클라이언트가 보낸 메시지를 다른 모든 클라리언트들에게 보내준다.
 				while(dis != null) {
-					sendMessage(dis.readUTF(), name);
+					if(dis.readUTF().substring(0, 2).equals("/w")) { // 만약 /w를 썼다면!
+						for (String map : clients.keySet()) {
+							if (dis.readUTF().indexOf(map) != -1) { // 만약 /w 다음 나오는 닉네임이 clients의 키에 있다면!
+								try (ServerSocket server = new ServerSocket(clients.get(map).getPort())) {
+									sendMessage(dis.readUTF(), name);
+								} catch (IOException ex) {
+									ex.printStackTrace();
+								}
+							}
+						}
+					} else {
+						sendMessage(dis.readUTF(), name);
+					}
 				}
+//				while(dis != null) {
+//					sendMessage(dis.readUTF(), name);
+//				}
 				
 			} catch (IOException ex) {
 				ex.printStackTrace();
@@ -143,6 +162,6 @@ public class MultiChatServer {
 		
 	}
 	public static void main(String[] args) {
-		new MultiChatClient().clientStart();
+		new MultiChatServer().serverStart();
 	}
 }
