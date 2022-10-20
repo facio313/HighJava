@@ -1,4 +1,4 @@
-package kr.or.ddit.board.vo;
+package kr.or.ddit.board;
 
 import java.util.Date;
 

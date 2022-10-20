@@ -31,7 +31,7 @@ public class TcpSocektServerTest {
 		
 		DataOutputStream dos = new DataOutputStream(out);
 		
-		dos.writeUTF("어서오세요");
+		dos.writeUTF("서버부터 켜셔야 합니다.");
 		System.out.println("메시지를 보냈습니다.");
 		
 		dos.close();
