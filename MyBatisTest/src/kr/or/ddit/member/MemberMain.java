@@ -271,6 +271,9 @@ public class MemberMain {
 		
 		MemberVO mv = new MemberVO();
 		mv.setMemId(memId);
+		// String memId = "";
+		// null이랑은 다름! null 들어가면 SQLException 뜸
+		// member.xml에서 jdbcType을 주면 괜찮음
 		mv.setMemName(memName);
 		mv.setMemTel(memTel);
 		mv.setMemAddr(memAddr);

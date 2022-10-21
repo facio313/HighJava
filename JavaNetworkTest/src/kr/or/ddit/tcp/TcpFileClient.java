@@ -21,7 +21,7 @@ public class TcpFileClient {
 	
 	public void clientStart() {
 		
-		File file = new File("d:/D_Other/down/aaa.jpg");
+		File file = new File("d:/D_Other/br5.jpg");
 		
 		try {
 			socket = new Socket("192.168.35.90", 7777);
@@ -65,5 +65,9 @@ public class TcpFileClient {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	public static void main(String[] args) {
+		new TcpFileClient().clientStart();
 	}
 }

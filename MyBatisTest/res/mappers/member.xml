@@ -36,6 +36,8 @@
 insert into mymember 
 (MEM_ID, MEM_NAME, MEM_TEL, MEM_ADDR, REG_DT)
 values (#{memId}, #{memName}, #{memTel}, #{memAddr}, sysdate)
+<!-- values (#{memId, jdbcType=VARCHAR}, #{memName, jdbcType=VARCHAR}, #{memTel, jdbcType=VARCHAR}, #{memAddr, jdbcType=VARCHAR}, sysdate) -->
+<!-- 원래는 이런 식으로 써줘야 함(정석), 안 그럼 setId() 등 쓸 때 null이면 SQLException 남 이거 써주면 null 들어와도 에러 안 남-->
 
 </insert>
 
