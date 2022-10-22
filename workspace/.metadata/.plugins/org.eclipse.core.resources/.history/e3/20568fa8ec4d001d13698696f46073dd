@@ -1,0 +1,7 @@
+package kr.or.ddit.comm.dao;
+
+public class MyBatisDao {
+public <T> selectOne(String statement, Object parameter) {
+	SqlSession sqlSession = MyBatis.Util.getSqlSession);
+}
+}

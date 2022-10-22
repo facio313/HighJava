@@ -1,0 +1,26 @@
+package kr.or.ddit.udp;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.SocketException;
+
+public class UdpSender {
+	private DatagramSocket ds;
+	private DatagramPacket dp;
+	
+	private byte[] msg; // 패킷 송수신을 위한 바이트배열 선언
+	
+	public UdpSender(int port) {
+		try {
+			ds = new DatagramSocket(8888);
+		} catch (SocketException ex) {
+			ex.printStackTrace();
+		}
+	}
+	
+	public void start() throws IOException {
+		while(true) {
+			
+		}
+	}
+}

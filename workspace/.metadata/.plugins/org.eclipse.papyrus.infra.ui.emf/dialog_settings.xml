@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.papyrus.infra.ui.emf.customizationManager">
+		<section name="platform:/resource/MVCTest/src/kr/or/ddit/board/board">
+			<item key="platform:/plugin/org.eclipse.papyrus.infra.gmfdiag.modelexplorer/resources/PapyrusDiagram.custom" value="true"/>
+			<item key="platform:/plugin/org.eclipse.papyrus.infra.nattable.modelexplorer/resources/PapyrusTable.custom" value="true"/>
+			<item key="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/SimpleUML.custom" value="false"/>
+			<item key="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/StereotypeDisplay.custom" value="true"/>
+			<item key="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/CustomizableUMLLabel.custom" value="false"/>
+			<item key="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/OpenedPage.custom" value="true"/>
+			<item key="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/ReadOnlyElement.custom" value="true"/>
+			<list key="org.eclipse.papyrus.infra.ui.emf.facet.order">
+				<item value="platform:/plugin/org.eclipse.papyrus.infra.gmfdiag.modelexplorer/resources/PapyrusDiagram.custom"/>
+				<item value="platform:/plugin/org.eclipse.papyrus.infra.nattable.modelexplorer/resources/PapyrusTable.custom"/>
+				<item value="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/OpenedPage.custom"/>
+				<item value="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/StereotypeDisplay.custom"/>
+				<item value="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/ReadOnlyElement.custom"/>
+			</list>
+		</section>
+	</section>
+</section>

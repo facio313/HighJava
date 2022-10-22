@@ -1,0 +1,16 @@
+package kr.or.ddit.basic;
+
+import java.net.InetAddress;
+
+public class InetAddressTest {
+	public static void main(String[] args) {
+		
+		// InetAddress 클래스 => IP주소를 다루기 위한 클래스
+		
+		// getByName() 메서드는 www.naver.com 또는 SEM-PC등과 같은 머신이름이나 IP주소를 통해 유효한 InetAddress 객체를 제공한다.
+		// 주소 자체의 유효성 체크가 이루어짐
+		
+		// 네이버의 IP정보 가져오기
+		InetAddress naverIp = InetAddress.getByName("www.naver.com");
+	}
+}

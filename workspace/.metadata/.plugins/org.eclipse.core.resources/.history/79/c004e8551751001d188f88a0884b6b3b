@@ -1,0 +1,11 @@
+package kr.or.ddit.http;
+
+/**
+ * 
+ * @author PC-08
+ * 간단한 웹서버 예제
+ */
+public class MyHTTPServer {
+	private final int port = 80;
+	private final String encoding = "UTF-8";
+}

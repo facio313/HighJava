@@ -1,0 +1,15 @@
+package kr.or.ddit.board;
+
+import org.apache.ibatis.session.SqlSession;
+
+import kr.or.ddit.util.MyBatisUtil;
+
+public class MyBatisDao {
+
+	public int insert(String statement, Object parameter) {
+		
+		SqlSession sqlSession = MyBatisUtil.getSqlSession();
+		
+		int cnt = 0;
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;T18SyncCollectionTest.java&apos; to &apos;JavaThreadTest/src/kr.or.ddit.basic&apos;&#x0D;&#x0A;- Original project: &apos;JavaThreadTest&apos;&#x0D;&#x0A;- Destination element: &apos;JavaThreadTest/src/kr.or.ddit.basic&apos;&#x0D;&#x0A;- Original element: &apos;kr.or.ddit.basic.homework.T18SyncCollectionTest.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;kr.or.ddit.basic" element1="/src&lt;kr.or.ddit.basic.homework{T18SyncCollectionTest.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1664868279739" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,9 @@
+package kr.or.ddit.basic;
+
+public class T11FileEncodingTest {
+	public static void main(String[] args) {
+		/*
+		 * OutputStreamWriter => 바이트기반 출력용 객체를 문자기반 출력용 객체로 변환하는 보조 스트림 
+		 */
+	}
+}

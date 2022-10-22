@@ -1,0 +1,23 @@
+package kr.or.ddit.basic;
+
+public class T10FileEncodingTest {
+/*
+ * 한글 인코딩 방식에 대하여...
+ * 
+ *  한글 인코딩 방식은 크게 UTF-8과 EUC-KR 방식, 두 가지로 나누어 볼 수 있다.
+ *  원래 한글 윈도우는 CP949 방식을 사용했는데, 윈도우를 개발한 마이크로소프트에서 EUC-KR 방식을 확장했기에 MS949라고도 부른다.
+ *  한글 윈도우의 메모장에서 말하는 ASNI 인코딩이란 CP949(Code Page 949)를 말한다.
+ *  CP949는 EUC-KR의 확장이며, 하위 호환성이 있다.]
+ *  
+ *  	MS949 => 윈도우의 기본 한글 인코딩 방식(ANSI계열)
+ *  	UTF-8 => 유니코드 UTF-8 인코딩 방식(영문자 및 숫자 : 1byte, 한글 : 3byte)	
+ */
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+
+<insert id="insertBoard" parameterType="BoardVO">
+
+insert into JDBC_BOARD
+(BOARD_NO, BOARD_TITLE, BOARD_WRITER, BOARD_DATE, BOARD_CONTENT)
+values (board_seq.nextval, ${title}, ${writer}, sysdate, ${content})
+
+</insert>
+
+<delete id="deleteBoard" parameterType="int">
+
+delete from JDBC_BOARD where BOARD_NO = #{no}
+
+</delete>
+
+<update id="updateBoard" parameterType="BoardVO">
+
+update JDBC_BOARD
+set board_title = ${title},
+board_writer = ${writer},
+board_content = ${content}
+where board_no = ${no}
+
+</update>
+   
+<select id="checkBoard" parameterType="int" resultType="int">
+
+select count(*) as cnt 
+from JDBC_BOARD 
+where board_no = #{no}
+
+</select>
+
+<select id="searchBoard" parameterType="BoardVO" resultMap="boardMap">
+
+		select * from JDBC_BOARD where 1=1
+		
+		<if test="no > 0">
+				and board_no = #{no}
+		</if>
+		<if test="title != null and title != ''">
+				and board_title = #{title}
+		</if>
+		<if test="writer != null and writer != ''">
+				and board_writer = #{writer}
+		</if>
+				
+</select>
+
+<resultMap type="BoardVO" id="boardMap">
+	<id column="board_no" property="no"/>
+	<result column="board_title" property="title"/>
+	<result column="board_writer" property="writer"/>
+	<result column="board_date" property="date"/>
+	<result column="board_content" property="content"/>
+</resultMap>
+
+<select id="listBoard" resultType="BoardVO">
+
+select	board_no		as no, 
+		board_title		as title, 
+		board_writer	as writer, 
+		board_date		as date,
+		board_content	as content
+from	JDBC_BOARD
+
+</select>
+
+</mapper>

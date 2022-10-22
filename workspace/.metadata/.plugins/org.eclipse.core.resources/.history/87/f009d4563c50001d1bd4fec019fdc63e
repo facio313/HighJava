@@ -1,0 +1,10 @@
+package kr.or.ddit.tcp;
+
+import java.util.Scanner;
+
+public class Sender extends Thread {
+	
+	private Scanner scan;
+	private String name;
+
+}

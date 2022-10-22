@@ -1,0 +1,21 @@
+package kr.or.ddit.udp;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+
+public class UdpFileReceiver {
+	private DatagramSocket ds;
+	private DatagramPacket dp;
+	
+	private byte[] buffer;
+	
+	public UdpFileReceiver(int port) {
+		try {
+			// 데이터 수신을 위한 포트번호 설정
+			ds = new DatagramSocket(port);
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+}

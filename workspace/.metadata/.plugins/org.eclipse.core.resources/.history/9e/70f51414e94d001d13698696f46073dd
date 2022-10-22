@@ -1,0 +1,5 @@
+package kr.or.ddit.comm.dao;
+
+public class MyBatisDao {
+
+}

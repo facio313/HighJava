@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+<!-- 파일 이름은 log4j2.xml로 해야만 함!!!! -->
+
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    
+    <File name="MyFile" fileName="Logs/app.log">
+    	<PatternLayout>
+			<Pattern>%d %-5p %c{1} [%t] %C{2} (%F:%L) - %m%n</Pattern>    	
+    	</PatternLayout>
+    </File>
+    
+  </Appenders>
+
+  <Loggers>
+  	<!-- 여기에 로거 추가 -->
+	<!-- <Logger name="log4jexam.sql.Query" level="debug"> -->
+	<Logger name="log4jexam.sql" level="debug" additivity="false">
+		<AppenderRef ref="Console"/>
+		<AppenderRef ref="MyFile"/>
+	</Logger>
+	<Logger name="log4jexam.sql.Pqrqmeter" level="debug">
+	
+	</Logger>
+	<Logger name="kr.or.ddit.basic.T01MemberInfoTest" level="debug">
+	
+	</Logger>
+
+    	<Root level="debug"> <!-- 기본 로거(디폴트 같은 거라 생각하면 됨) -->
+      <AppenderRef ref="Console"/>
+    </Root>
+	</Loggers>
+
+</Configuration>

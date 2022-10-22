@@ -1,0 +1,39 @@
+package kr.or.ddit.comm.dao;
+
+import org.apache.ibatis.session.SqlSession;
+
+public class MyBatisDao {
+	public <T> selectOne(String statement, Object parameter) {
+		SqlSession sqlSession = MyBatis.Util.getSqlSession);
+	
+		T obj = null;
+		try {
+			obj = sqlSession.selectOne(statement, parameter);
+			
+		} catch ( persistenceExcpetion ex) {
+			throw new RuntimeException("데이터 조회 중 예외 발생", ex)''
+		} finally {
+			sqlSession.close();
+		}	
+	
+		return obj;
+	}
+	
+	public int insert(String statement, Object parameter) {
+		
+		SqlSession sqlSession = MyBatisUtil.getSqlSession();
+		
+		int cnt = 0;
+		
+		try {
+			
+		} catch (PersistenceException ex) {
+			sqlSession.rollback();
+		} throw new RuntimeException("데이터 등록 중 예외발생!", ex);
+	} finally {
+		sqlSession.close();
+	}
+	
+	return cnt;
+
+}

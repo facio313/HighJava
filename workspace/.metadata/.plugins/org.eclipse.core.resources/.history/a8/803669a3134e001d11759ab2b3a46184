@@ -1,0 +1,142 @@
+package kr.or.ddit.board.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import kr.or.ddit.board.MyBatisDao;
+import kr.or.ddit.board.vo.BoardVO;
+import kr.or.ddit.util.JDBCUtil3;
+
+public class BoardDao extends MyBatisDao implements IBoardDao {
+
+	@Override
+	public int insertBoard(BoardVO bv) {
+
+		return insert("board.insertBoard", bv);
+	}
+
+	@Override
+	public int deleteBoard(int no) {
+		
+		return delete("board.deleteBoard", no);
+	}
+
+	@Override
+	public int updateBoard(BoardVO bv) {
+		
+		return 0;
+	}
+
+	@Override
+	public boolean checkBoard(int no) {
+		
+		boolean exist = false;
+		
+		int cnt = (int) selectOne("board.checkBoard", no);
+
+		return exist;
+	}
+
+	@Override
+	public List<BoardVO> searchBoard(BoardVO bv) {
+		
+		List<BoardVO> list = new ArrayList<>();
+		
+		try {
+			conn = JDBCUtil3.getConnection();
+			
+			String sql = " select * from JDBC_BOARD where 1=1 ";
+			
+			if (bv.getNo() > 0) {
+				sql += " and board_no = ? ";
+			}
+			
+			if (bv.getTitle() != null && !bv.getTitle().equals("")) {
+				sql += " and board_title = ?";
+			}
+			if (bv.getWriter() != null && !bv.getWriter().equals("")) {
+				sql += " and board_writer = ?";
+			}
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			int index = 1;
+			
+			if (bv.getNo() > 0) {
+				pstmt.setInt(index++,  bv.getNo());
+			}
+			
+			if (bv.getTitle() != null && !bv.getTitle().equals("")) {
+				pstmt.setString(index++, bv.getTitle());
+			}
+			if (bv.getWriter() != null && !bv.getWriter().equals("")) {
+				pstmt.setString(index++, bv.getWriter());
+			}
+			
+			rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				
+				BoardVO bv2 = new BoardVO();
+				
+				bv2.setNo(rs.getInt("board_no"));
+				bv2.setTitle(rs.getString("board_title"));
+				bv2.setWriter(rs.getString("board_writer"));
+				bv2.setDate(rs.getDate("board_date"));
+				bv2.setContent(rs.getString("board_content"));
+				
+				list.add(bv2);
+				
+			}
+			
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		} finally {
+			JDBCUtil3.close(conn, stmt, pstmt, rs);
+		}
+		return list;
+	}
+
+	@Override
+	public List<BoardVO> listBoard() {
+		
+		List<BoardVO> list = new ArrayList<>();
+		
+		try {
+			
+			conn = JDBCUtil3.getConnection();
+			
+			String sql = "select * from JDBC_BOARD";
+			
+			stmt = conn.createStatement();
+			
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				
+				BoardVO bv = new BoardVO();
+				
+				bv.setNo(rs.getInt("board_no"));
+				bv.setTitle(rs.getString("board_title"));
+				bv.setWriter(rs.getString("board_writer"));
+				bv.setDate(rs.getDate("board_date"));
+				bv.setContent(rs.getString("board_content"));
+				
+				list.add(bv);
+			}
+				
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		} finally {
+			JDBCUtil3.close(conn, stmt, pstmt, rs);
+		}
+		return list;
+	}
+
+}
