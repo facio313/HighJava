@@ -11,6 +11,7 @@ import java.util.Date;
 public class UdpSender {
 	private DatagramSocket ds;
 	private DatagramPacket dp; // 소켓을 갖고 데이터를 보낼 때 Packet에다 담아서 상대방 소켓에다가 보내버림
+	// 연결 안 돼있으면 허공에다 보낸 격
 	
 	private byte[] msg; // 패킷 송수신을 위한 바이트배열 선언
 	

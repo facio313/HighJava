@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* div {
+            border: 1px solid gold;
+        } */
+        #wrapper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        #side {
+            position: fixed;
+            border: 1px solid white;
+            background-color: white;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 79px;
+            height: 100vh;
+            z-index: 9999;
+        }
+
+        #head {
+            position: fixed;
+            border: 1px solid white;
+            background-color: white;
+            top: 0;
+            left: 79px;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 125px;
+            z-index: 9999;
+
+        }
+
+        #search {
+            position: fixed;
+            top: 9px;
+            left: 35%;
+            right: 0;
+            bottom: 0;
+            width: 30%;
+            height: 43px;
+        }
+
+        #searchbox {
+            width: 100%;
+            height: 45px;
+            font-size: 20px;
+        }
+
+        #submit {
+            position: fixed;
+            width: 70px;
+            height: 45px;
+            font-size: 25px;
+        }
+
+        #contents {
+            position: relative;
+            top: 0px;
+            left: 82px;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .toggle {
+            position: relative;
+            top: -1px;
+            left: -1px;
+            right: 2px;
+            bottom: 10px;
+
+        }
+
+        #logo {
+            position: relative;
+            top: 5px;
+            left: -2px;
+        }
+
+        #underSearch {
+            position: relative;
+            top: 3px;
+            z-index: 9999;
+        }
+
+        #home {
+            position: relative;
+            top: 9px;
+        }
+
+        #glance {
+            position: relative;
+            top: 24px;
+        }
+
+        #shorts {
+            position: relative;
+            top: 44px;
+        }
+
+        #subscription {
+            position: relative;
+            top: 59px;
+        }
+
+        #jar {
+            position: relative;
+            top: 76px;
+        }
+
+        #history {
+            position: relative;
+            top: 95px
+        }
+
+        #scroll {
+            position: relative;
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            top: 9px;
+        }
+
+        .scrollToggle {
+            left: 5px;
+            position: sticky;
+            float: left;
+        }
+
+        #voice {
+            position: fixed;
+            top: 6px;
+            right: 200px;
+        }
+
+        #dot3 {
+            position: fixed;
+            right: 139px;
+            top: 7px;
+        }
+
+        #login {
+            position: fixed;
+            right: 9px;
+            top: 4px;
+        }
+
+        #underScroll {
+            position: relative;
+            top: 16px;
+            z-index: 9998;
+        }
+
+        #video {
+            position: relative;
+            top: 148px;
+            left: 89px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="side">
+            <a href="">
+                <img class="toggle" src="./images/toggle/3작대기.png" alt="메뉴 자세히 보기">
+            </a>
+            <a href="https://youtube.com">
+                <img class="toggle" id="home" src="./images/toggle/홈.png" alt="메인 화면 가기">
+            </a>
+            <a href="https://youtube.com/feed/explore">
+                <img class="toggle" id="glance" src="./images/toggle/탐색.png" alt="둘러보기">
+            </a>
+            <a href="https://youtube.com/shorts">
+                <img class="toggle" id="shorts" src="./images/toggle/Shorts.png" alt="쇼츠 보기">
+            </a>
+            <a href="https://www.youtube.com/feed/subscriptions">
+                <img class="toggle" id="subscription" src="./images/toggle/구독.png" alt="구독 리스트">
+            </a>
+            <a href="https://www.youtube.com/feed/library">
+                <img class="toggle" id="jar" src="./images/toggle/보관함.png" alt="내 보관함">
+            </a>
+            <a href="https://www.youtube.com/feed/downloads">
+                <img class="toggle" id="history" src="./images/toggle/시청기록.png" alt="뭘 봤니">
+            </a>
+        </div>
+        <div id="head">
+            <div>
+                <div>
+                    <img id="logo" src="./images/search/로고.png" alt="홈 화면으로 돌아가는 로고">
+                    <!--<div id="search"></div>-->
+                    <form action="search.php" method="post" autocomplete="off" id="search">
+                        <input type="text" title="검색" value="검색" id="searchbox">
+                        <input type="submit" value="🔍︎" id="submit">
+                    </form>
+                    <img id="voice" src="./images/search/음성인식.png" alt="음성인식">
+                    <img id="dot3" src="./images/search/점3개.png" alt="점3개">
+                    <img id="login" src="./images/search/로그인.png" alt="로그인">
+                </div>
+                <hr id="underSearch">
+                <div id="scroll">
+                    <a href="">
+                        <img class="scrollToggle" src="./images/scroll/1전체.png" alt="전체">
+                    </a>
+                    <a href="">
+                        <img class="scrollToggle" src="./images/scroll/2실시간.png" alt="실시간">
+                    </a>
+                    <a href="">
+                        <img class="scrollToggle" src="./images/scroll/3게임.png" alt="게임">
+                    </a>
+                    <a href="">
+                        <img class="scrollToggle" src="./images/scroll/4음악.png" alt="음악">
+                    </a>
+                    <a href="">
+                        <img class="scrollToggle" src="./images/scroll/5믹스.png" alt="믹스">
+                    </a>
+                    <a href="">
+                        <img class="scrollToggle" src="./images/scroll/7요리.png" alt="요리">
+                    </a>
+                    <a href="">
+                        <img class="scrollToggle" src="./images/scroll/9축구.png" alt="축구">
+                    </a>
+                    <a href="">
+                        <img class="scrollToggle" src="./images/scroll/10최근에 업로드된 동영상10.png" alt="최근에 업로드된 동영상">
+                    </a>
+                </div>
+                <hr id="underScroll">
+            </div>
+        </div>
+        <hr>
+        <div id="contents">
+            <div id="video">
+                <table>
+                    <tr>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/2rq5hctXUt0"
+                                title="Clara-Jumi Kang: Ernst, The Last Rose of Summer" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/ruG7EML1juQ"
+                                title="葉加瀬太郎　五嶋龍　情熱大陸" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/Bt-QwrR-Pjw"
+                                title="Henryk Wieniawski - Violinkonzert Nr.1 | Ray Chen | Cristian Măcelaru | WDR Sinfonieorchester"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/JY-t7MHGLII"
+                                title="Oleksii Semenenko | Paganini | I Palpiti | 2015 Queen Elisabeth International Violin Competition"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                    </tr>
+                    <tr>
+                        <td>rnst, The Last Rose of Summer</td>
+                        <td>葉加瀬太郎　五嶋龍　情熱大陸</td>
+                        <td>Henryk Wieniawski - Violinkonzert Nr.1</td>
+                        <td>Paganini | I Palpiti</td>
+                    </tr>
+                    <tr>
+                        <td>Clara-Jumi Kang</td>
+                        <td>Goto Ryu</td>
+                        <td>Ray Chen</td>
+                        <td>Oleksii Semenenko</td>
+                    </tr>
+                    <tr>
+                        <td>조회수 85만회 1개월 전</td>
+                        <td>조회수 116만회 8개월 전</td>
+                        <td>조회수 43만회 5개월 전</td>
+                        <td>조회수 76만회 3개월 전</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/zAggiUnbNEQ"
+                                title="7일동안 집사가 없어지자 강아지가 이상행동을 보여요ㅠ" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/esCsljgiLi4"
+                                title="강아지를 사람처럼 키우는 할머니 때문에 미치겠어요.." frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/8uNYT9vbqOs"
+                                title="고양이가 귀엽다는 말에 진짜 실망해버린 강아지 ㅜㅜㅋㅋㅋ (정색 주의)" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/on09zv-ujyc"
+                                title="단체로 항의하는 아기 강아지들ㅋㅋㅋ" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                    </tr>
+                    <tr>
+                        <td>7일동안 집사가 없어지자 강아지가 이상행동을 보여요ㅠ</td>
+                        <td>강아지를 사람처럼 키우는 할머니 때문에 미치겠어요..</td>
+                        <td>고양이가 귀엽다는 말에 진짜 실망해버린 강아지 ㅜㅜ</td>
+                        <td>단체로 항의하는 아기 강아지들ㅋㅋㅋ</td>
+                    </tr>
+                    <tr>
+                        <td>소녀의 행성</td>
+                        <td>강아지 할머니</td>
+                        <td>고강이</td>
+                        <td>소녀의 행성</td>
+                    </tr>
+                    <tr>
+                        <td>조회수 33만회 9개월 전</td>
+                        <td>조회수 12만회 10개월 전</td>
+                        <td>조회수 21만회 12개월 전</td>
+                        <td>조회수 18만회 11개월 전</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/2rq5hctXUt0"
+                                title="Clara-Jumi Kang: Ernst, The Last Rose of Summer" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/ruG7EML1juQ"
+                                title="葉加瀬太郎　五嶋龍　情熱大陸" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/Bt-QwrR-Pjw"
+                                title="Henryk Wieniawski - Violinkonzert Nr.1 | Ray Chen | Cristian Măcelaru | WDR Sinfonieorchester"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/JY-t7MHGLII"
+                                title="Oleksii Semenenko | Paganini | I Palpiti | 2015 Queen Elisabeth International Violin Competition"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                    </tr>
+                    <tr>
+                        <td>rnst, The Last Rose of Summer</td>
+                        <td>葉加瀬太郎　五嶋龍　情熱大陸</td>
+                        <td>Henryk Wieniawski - Violinkonzert Nr.1</td>
+                        <td>Paganini | I Palpiti</td>
+                    </tr>
+                    <tr>
+                        <td>Clara-Jumi Kang</td>
+                        <td>Goto Ryu</td>
+                        <td>Ray Chen</td>
+                        <td>Oleksii Semenenko</td>
+                    </tr>
+                    <tr>
+                        <td>조회수 85만회 1개월 전</td>
+                        <td>조회수 116만회 8개월 전</td>
+                        <td>조회수 43만회 5개월 전</td>
+                        <td>조회수 76만회 3개월 전</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/zAggiUnbNEQ"
+                                title="7일동안 집사가 없어지자 강아지가 이상행동을 보여요ㅠ" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/esCsljgiLi4"
+                                title="강아지를 사람처럼 키우는 할머니 때문에 미치겠어요.." frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/8uNYT9vbqOs"
+                                title="고양이가 귀엽다는 말에 진짜 실망해버린 강아지 ㅜㅜㅋㅋㅋ (정색 주의)" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/on09zv-ujyc"
+                                title="단체로 항의하는 아기 강아지들ㅋㅋㅋ" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                    </tr>
+                    <tr>
+                        <td>7일동안 집사가 없어지자 강아지가 이상행동을 보여요ㅠ</td>
+                        <td>강아지를 사람처럼 키우는 할머니 때문에 미치겠어요..</td>
+                        <td>고양이가 귀엽다는 말에 진짜 실망해버린 강아지 ㅜㅜ</td>
+                        <td>단체로 항의하는 아기 강아지들ㅋㅋㅋ</td>
+                    </tr>
+                    <tr>
+                        <td>소녀의 행성</td>
+                        <td>강아지 할머니</td>
+                        <td>고강이</td>
+                        <td>소녀의 행성</td>
+                    </tr>
+                    <tr>
+                        <td>조회수 33만회 9개월 전</td>
+                        <td>조회수 12만회 10개월 전</td>
+                        <td>조회수 21만회 12개월 전</td>
+                        <td>조회수 18만회 11개월 전</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/2rq5hctXUt0"
+                                title="Clara-Jumi Kang: Ernst, The Last Rose of Summer" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/ruG7EML1juQ"
+                                title="葉加瀬太郎　五嶋龍　情熱大陸" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/Bt-QwrR-Pjw"
+                                title="Henryk Wieniawski - Violinkonzert Nr.1 | Ray Chen | Cristian Măcelaru | WDR Sinfonieorchester"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/JY-t7MHGLII"
+                                title="Oleksii Semenenko | Paganini | I Palpiti | 2015 Queen Elisabeth International Violin Competition"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                    </tr>
+                    <tr>
+                        <td>rnst, The Last Rose of Summer</td>
+                        <td>葉加瀬太郎　五嶋龍　情熱大陸</td>
+                        <td>Henryk Wieniawski - Violinkonzert Nr.1</td>
+                        <td>Paganini | I Palpiti</td>
+                    </tr>
+                    <tr>
+                        <td>Clara-Jumi Kang</td>
+                        <td>Goto Ryu</td>
+                        <td>Ray Chen</td>
+                        <td>Oleksii Semenenko</td>
+                    </tr>
+                    <tr>
+                        <td>조회수 85만회 1개월 전</td>
+                        <td>조회수 116만회 8개월 전</td>
+                        <td>조회수 43만회 5개월 전</td>
+                        <td>조회수 76만회 3개월 전</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/zAggiUnbNEQ"
+                                title="7일동안 집사가 없어지자 강아지가 이상행동을 보여요ㅠ" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/esCsljgiLi4"
+                                title="강아지를 사람처럼 키우는 할머니 때문에 미치겠어요.." frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/8uNYT9vbqOs"
+                                title="고양이가 귀엽다는 말에 진짜 실망해버린 강아지 ㅜㅜㅋㅋㅋ (정색 주의)" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                        <td><iframe width="400" height="240" src="https://www.youtube.com/embed/on09zv-ujyc"
+                                title="단체로 항의하는 아기 강아지들ㅋㅋㅋ" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></td>
+                    </tr>
+                    <tr>
+                        <td>7일동안 집사가 없어지자 강아지가 이상행동을 보여요ㅠ</td>
+                        <td>강아지를 사람처럼 키우는 할머니 때문에 미치겠어요..</td>
+                        <td>고양이가 귀엽다는 말에 진짜 실망해버린 강아지 ㅜㅜ</td>
+                        <td>단체로 항의하는 아기 강아지들ㅋㅋㅋ</td>
+                    </tr>
+                    <tr>
+                        <td>소녀의 행성</td>
+                        <td>강아지 할머니</td>
+                        <td>고강이</td>
+                        <td>소녀의 행성</td>
+                    </tr>
+                    <tr>
+                        <td>조회수 33만회 9개월 전</td>
+                        <td>조회수 12만회 10개월 전</td>
+                        <td>조회수 21만회 12개월 전</td>
+                        <td>조회수 18만회 11개월 전</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
