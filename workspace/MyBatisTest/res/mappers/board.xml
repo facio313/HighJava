@@ -26,7 +26,7 @@ board_content = ${content}
 where board_no = ${no}
 
 </update>
-   
+  
 <select id="checkBoard" parameterType="int" resultType="int">
 
 select count(*) as cnt 
