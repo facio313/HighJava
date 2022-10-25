@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.swing.text.SimpleAttributeSet;
 
 public class T02FileTest {
 	public static void main(String[] args) {
@@ -40,7 +39,7 @@ public class T02FileTest {
 		File[] files = f3.listFiles();//listFiles()
 
 		for (File f : files) {
-			System.out.println(f.getName() + " => ");
+			System.out.print(f.getName() + " => ");
 
 			if (f.isFile()) {
 				System.out.println("파일");
@@ -99,9 +98,11 @@ public class T02FileTest {
 				attr += files[i].isHidden() ? "H" : " ";
 			}
 			
-			System.out.printf("%s %5s %12s %s\n",
+			System.out.printf("%s\t%5s\t%12s\t%s\n",
 					sdf.format(new Date(files[i].lastModified())), attr, size, files[i].getName());
 		}
+		
+		
 		
 		int dirCnt = subDirList.size(); // 폴더 안의 하위 폴더 개수
 		

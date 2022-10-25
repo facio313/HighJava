@@ -9,7 +9,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -38,6 +37,9 @@ public class T01DOMCreationTest {
  */
 	
 	public void createDoc( ) throws ParserConfigurationException, TransformerException {
+		
+		// DocumentBuilderFactory -> DocumentBuilder -> Document -> Element
+		
 		// XML문서를 생성하기 위한 DocumentBuilder 객체 생성하기
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = dbf.newDocumentBuilder();

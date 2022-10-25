@@ -1,4 +1,4 @@
-,ㅣ  package kr.or.ddit.basic;
+package kr.or.ddit.basic;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

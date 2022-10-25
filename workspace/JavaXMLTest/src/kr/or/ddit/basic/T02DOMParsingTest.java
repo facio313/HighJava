@@ -18,6 +18,8 @@ public class T02DOMParsingTest {
 
 	public void parse() throws ParserConfigurationException, SAXException, IOException {
 		
+		// DocumentBuilderFactory -> DocumentBuilder -> Document -> Element
+		
 		// XML문서를 생성하기 위한 DocumentBuilder 객체 생성하기
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = dbf.newDocumentBuilder();
