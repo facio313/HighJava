@@ -13,10 +13,10 @@ public class T04ByteArrayIOTest {
 		byte[] outSrc = null;
 		byte[] temp = new byte[4]; // 자료를 읽을 때 사용할 배열
 		
-		ByteArrayInputStream bais = new ByteArrayInputStream(inSrc);
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		ByteArrayInputStream bais = new ByteArrayInputStream(inSrc); // bais에다가 inSrc를 입력하기
+		ByteArrayOutputStream baos = new ByteArrayOutputStream(); // 어딘가에 출력할 baos 만들기
 		
-		int readBytes = 0;
+		int readBytes = 0; // bais 읽은 것을 저장할 변수 선언
 		
 		while((readBytes = bais.read(temp)) != -1) { //read(배열) : 반복횟수 
 			// baos.write(temp);

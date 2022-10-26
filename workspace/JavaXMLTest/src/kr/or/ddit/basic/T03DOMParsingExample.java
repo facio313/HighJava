@@ -53,7 +53,7 @@ public class T03DOMParsingExample {
   		
   		if (code.equals("INFO-000")) { // 정상 상태인 경우...
   			
-  			NodeList rowNodeList = root.getElementsByTagName("row");
+  			NodeList rowNodeList = root.getElementsByTagName("row"); // row or itm
   			
   			for (int i = 0; i < rowNodeList.getLength(); i++) {
   				

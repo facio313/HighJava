@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="mv.set"/>
+		<item key="selection" value="PrintWriter"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="printwriter"/>
+			<item value="servlet"/>
+			<item value="값"/>
 			<item value="mv.set"/>
 			<item value="mv.setaddr"/>
 			<item value="sendmessage"/>
@@ -20,9 +23,6 @@
 			<item value="회원정보"/>
 			<item value="JDBCUtil2"/>
 			<item value="JDBCUtil"/>
-			<item value="serializable"/>
-			<item value="class"/>
-			<item value="main"/>
 		</list>
 		<list key="replacehistory">
 			<item value="JDBCUtil3"/>

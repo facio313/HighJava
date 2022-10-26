@@ -48,6 +48,6 @@ public class T15PrintStreamTest {
 		pw.close();
 		
 		// PrintStream은 예전부터 쓰던 거라 쓰는 거고 PrintWriter가 더 낫다
-		// survlet할 때 다시 사용할 것임
+		// servlet할 때 다시 사용할 것임
 	}
 }

@@ -7,9 +7,13 @@ import java.net.URLEncoder;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-http://openapi.epost.go.kr/postal/retrieveLotNumberAdressAreaCdService/retrieveLotNumberAdressAreaCdService/getComplexListAreaCd
-	?serviceKey=JTpWDYFZS7u8AmLXQMOhVuqZlifrhgH3cRVd3TFMS%2F5nbdB6vETWKc89Z2GaffqsdMfGRXULro%2F5tiq7SVWdzg%3D%3D
-	&currentPage=1&areaNm=%EB%B9%9B%EA%B0%80%EB%9E%8C%EB%8F%99&searchSe=and&srchwrd=%EC%98%81%EB%AC%B4&countPerPage=10
+//http://openapi.epost.go.kr/postal/retrieveLotNumberAdressAreaCdService/retrieveLotNumberAdressAreaCdService/getComplexListAreaCd
+//	?serviceKey=JTpWDYFZS7u8AmLXQMOhVuqZlifrhgH3cRVd3TFMS%2F5nbdB6vETWKc89Z2GaffqsdMfGRXULro%2F5tiq7SVWdzg%3D%3D
+//	&currentPage=1
+//	&areaNm=%EB%B9%9B%EA%B0%80%EB%9E%8C%EB%8F%99
+//	&searchSe=and
+//	&srchwrd=%EC%98%81%EB%AC%B4
+//	&countPerPage=10
 
 
 
