@@ -1,7 +1,0 @@
-package kr.or.ddit.tcp;
-
-public class TcpFileServer {
-/*
- *  서버는 클라이언트가 접속하면 서버 컴퓨터의 D:/D_Other/에 있는 이미지 파일을 클라이언트로 전송한다.
- */
-}
