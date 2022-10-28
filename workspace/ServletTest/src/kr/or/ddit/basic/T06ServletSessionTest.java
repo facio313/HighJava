@@ -12,9 +12,10 @@ import javax.servlet.http.HttpSession;
 
 public class T06ServletSessionTest extends HttpServlet {
 /*
- 세션(HttpSession) 객체에 대하여... => 로그인에 접목
+ 세션(HttpSession) 객체에 대하여... => 로그인에 접목(세션이 있다고 로그인된 건 아님. 로그인 체크는 다른 로직!)
  
  - 세션을 통해서 사용자(웹 브라우저)별로 구분하여 정보를 관리할 수 있다(세션ID 이용)
+ - 세션은 각 사용자별 정보를 관리함
  - 쿠키를 사용할 때보다 보안이 향상된다.(서버에 정보가 저장되기 때문에)
  
  - 세션 객체를 가져오는 방법
