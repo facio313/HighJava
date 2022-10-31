@@ -12,6 +12,9 @@ import javax.servlet.http.HttpSession;
 
 public class T06ServletSessionTest extends HttpServlet {
 /*
+ * 
+ * HttpRequest랑 HttpResponse는 한 번 주고 받고 객체가 사라짐. 그래서 사용자별 정보를 저장하는 데에 적합하지 않음
+ * 그래서 session을 씀 
  세션(HttpSession) 객체에 대하여... => 로그인에 접목(세션이 있다고 로그인된 건 아님. 로그인 체크는 다른 로직!)
  
  - 세션을 통해서 사용자(웹 브라우저)별로 구분하여 정보를 관리할 수 있다(세션ID 이용)

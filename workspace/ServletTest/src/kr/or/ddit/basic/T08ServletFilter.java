@@ -24,6 +24,8 @@ public class T08ServletFilter implements Filter{
 	- 인코딩 필터
 	- 로깅 및 감사 처리 필터
 	- 이미지 변환 필터 등
+	
+	- 필터 체인이랑 필터가 겹겹이 겹쳐있어 연결되어 있는 것들   A필터 -> B필터 -> C필터
  */
 	@Override
 	public void destroy() {
@@ -41,7 +43,7 @@ public class T08ServletFilter implements Filter{
 		System.out.println("IP주소 : " + ipAddr + "\n포트번호 : " + request.getRemotePort() + "\n현재시간 : " + new Date());
 		
 		// 필터체인을 실행한다.(요청 및 응답 객체 전달한다.)
-		chain.doFilter(request, response); // doFilter() -> 여러 필터들이 겹쳐잇느데 다음 필터로 넘겨짐 마지막에는 서버로 넘김
+		chain.doFilter(request, response); // doFilter() -> 여러 필터들이 겹쳐있는데(필터체인) 다음 필터로 넘겨짐 마지막에는 서버로 넘김
 		
 		System.out.println("T08ServletFilter.doFilter()" + " 끝...");
 	}

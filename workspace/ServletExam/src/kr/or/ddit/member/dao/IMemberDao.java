@@ -26,6 +26,13 @@ public interface IMemberDao {
 	public boolean checkMember(String memId);
 	
 	/**
+	 * 주어진 회원Id에 해당하는 회원정보를 알아내기 위한 메서드
+	 * @param memId 확인 대상 회원ID 
+	 * @return 해당 회원ID에 맞는 회원정보
+	 */
+	public MemberVO getMember(String memId);
+	
+	/**
 	 * 하나의 MemberVO객체를 이용하여 DB정보를 update하는 메서드
 	 * @param mv update할 회원 정보가 들어있는 MemberVO객체
 	 * @return 작업성공 : 1, 작업실패 : 0
