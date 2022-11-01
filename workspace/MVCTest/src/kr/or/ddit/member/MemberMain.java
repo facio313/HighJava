@@ -106,26 +106,26 @@ public class MemberMain {
 			displayMenu(); // 메뉴 출력
 			choice = scan.nextInt(); // 메뉴번호 입력받기
 			switch (choice) {
-			case 1: // 자료 입력
-				insertMember();
+				case 1: // 자료 입력
+					insertMember();
+					break;
+				case 2: // 자료 삭제
+					deleteMember();
 				break;
-			case 2: // 자료 삭제
-				deleteMember();
-				break;
-			case 3: // 자료 수정
-				updateMember();
-				break;
-			case 4: // 전체 자료 출력
-				selectAllMember();
-				break;
-			case 5: // 자료 검색
-				searchMember();
-				break;
-			case 6: // 작업 끝
-				System.out.println("작업을 마칩니다.");
-				break;
-			default:
-				System.out.println("번호를 잘못 입력했습니다. 다시입력하세요");
+				case 3: // 자료 수정
+					updateMember();
+					break;
+				case 4: // 전체 자료 출력
+					selectAllMember();
+					break;
+				case 5: // 자료 검색
+					searchMember();
+					break;
+				case 6: // 작업 끝
+					System.out.println("작업을 마칩니다.");
+					break;
+				default:
+					System.out.println("번호를 잘못 입력했습니다. 다시입력하세요");
 			}
 		} while (choice != 6);
 	}
