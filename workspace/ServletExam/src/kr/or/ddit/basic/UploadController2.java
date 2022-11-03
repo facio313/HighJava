@@ -41,7 +41,7 @@ public class UploadController2 extends HttpServlet {
 				
 				fileName = getFileName(part);
 				
-				if (fileName != null && !fileName.equals("")) {
+				if (fileName != null/*파일이 없는 경우*/ && !fileName.equals("")/*파일선택 x한 경우*/) {
 					// 폼 필드가 아니거나 파일이 비어있지 않은 경우...
 					part.write(uploadPath + File.separator + fileName); // 파일 저장
 					System.out.println(uploadPath + File.separator + fileName + " => 저장 완료!!!");

@@ -18,6 +18,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 /**
  * 자카르타 프로젝트의 fileupload 모듈을 이용한 파일 업로드 예제
+ * 멀티 파트 // 폼 데이터
  */
 
 @WebServlet("/test/upload.do")

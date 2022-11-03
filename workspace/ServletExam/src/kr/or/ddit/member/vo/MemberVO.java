@@ -23,6 +23,17 @@ public class MemberVO {
 	private String memTel;
 	private String memAddr;
 	private Date regDate;
+	private long atchFileId = -1;
+
+	
+	
+	public long getAtchFileId() {
+		return atchFileId;
+	}
+
+	public void setAtchFileId(long atchFileId) {
+		this.atchFileId = atchFileId;
+	}
 
 	public String getMemId() {
 		return memId;
